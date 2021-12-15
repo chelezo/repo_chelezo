@@ -8,9 +8,11 @@ namespace helloword
         {
            String myUserName = Environment.UserName;
 
-
-            Console.WriteLine($"Добрый День { myUserName} сегодня [" + DateTime.Now + "]");
+            Console.WriteLine($"Как Вас зовут?");
             string name = Console.ReadLine();
+            Console.WriteLine($"Добрый День { name} ваша учетная запись ПК '{ myUserName}' сегодня  [" + DateTime.Now + "]");
+            Console.ReadLine();
+
         }
     }
 }
