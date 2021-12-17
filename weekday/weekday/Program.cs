@@ -6,43 +6,58 @@ namespace weekday
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите день недели!");
+            Console.WriteLine("Введите порядковый номер месяца!");
             int weekday = Convert.ToInt32(Console.ReadLine());
-            int maxnum = 8;
+            int maxnum = 13;
             string day = "";
             switch (weekday)
             {
                 case 1:
-                    day = "Понедельник";
+                    day = "Яанварь";
                     break;
                 case 2:
-                    day = "Вторник";
+                    day = "Февраль";
                     break;
                 case 3:
-                    day = "Среда";
+                    day = "Март";
                     break;
                 case 4:
-                    day = "Четверг";
+                    day = "Апрель";
                     break;
                 case 5:
-                    day = "Тяпница";
+                    day = "Май";
                     break;
                 case 6:
-                    day = "субота";
+                    day = "Июнь";
                     break;
                 case 7:
-                    day = "Воскресенье и завтра на работу";
+                    day = "Июль";
+                    break;
+                case 8:
+                    day = "Август";
+                    break;
+                case 9:
+                    day = "Сентябрь";
+                    break;
+                case 10:
+                    day = "Октябрь";
+                    break;
+                case 11:
+                    day = "Ноябрь";
+                    break;
+                case 12:
+                    day = "Декабрь";
                     break;
 
             }
             if (weekday >= maxnum)
             {
-                Console.WriteLine("неправильный день недели");
+                Console.WriteLine("неправильный номер");
                 Console.ReadLine();
             }
             else {
                                    
-                Console.WriteLine($" День недели { day}");
+                Console.WriteLine($" Месяц { day}");
                 Console.ReadLine();
             }
             // Console.WriteLine($" День недели { day}");
