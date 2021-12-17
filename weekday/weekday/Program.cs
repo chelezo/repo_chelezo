@@ -6,10 +6,13 @@ namespace weekday
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("ВВедите температуру");
+            int temp = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Введите порядковый номер месяца!");
-            int weekday = Convert.ToInt32(Console.ReadLine());
-            int maxnum = 13;
+            int weekday = Convert.ToInt32(Console.ReadLine());          
+            int maxnum = 12;
             string day = "";
+            string vremyagoda = "";
             switch (weekday)
             {
                 case 1:
@@ -48,19 +51,53 @@ namespace weekday
                 case 12:
                     day = "Декабрь";
                     break;
+                
 
             }
-            if (weekday >= maxnum)
+            switch (weekday)
             {
+                case 1:
+                case 2:
+                case 12:
+                    vremyagoda = "Зима";
+                    break;
+                case 3:                   
+                case 4:
+                case 5:
+                    vremyagoda = "Весна";
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    vremyagoda = "Лето";
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    vremyagoda = "Осень";
+                    break;
+
+
+            }
+            if
+                (weekday > maxnum)
+            {
+
                 Console.WriteLine("неправильный номер");
                 Console.ReadLine();
             }
-            else {
-                                   
-                Console.WriteLine($" Месяц { day}");
+            else if (temp > 0)
+            {
+                Console.WriteLine($"На улице тепло, время года {vremyagoda}, а месяц { day}");
                 Console.ReadLine();
             }
-            // Console.WriteLine($" День недели { day}");
+            else if (temp < 0)
+            {
+                Console.WriteLine($"На улице холодно, время года {vremyagoda}, а месяц { day}");
+                Console.ReadLine();
+            }   
+            
+          
         }
     }
 }
