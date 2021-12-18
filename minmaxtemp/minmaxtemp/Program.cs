@@ -8,10 +8,10 @@ namespace minmaxtemp
         {
            
             Console.WriteLine("Введите минимальную температуру");
-            int min = Convert.ToInt32(Console.ReadLine());
+            double min = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Введите максимальну температуру");
-            int max = Convert.ToInt32(Console.ReadLine());
-            int summa = ((min + max) / 2);
+            double max = Convert.ToInt32(Console.ReadLine());
+            double summa = ((min + max) / 2);
             Console.WriteLine($"Средняя температура { summa}");
         }
 
