@@ -19,30 +19,35 @@ namespace season
         {
             //int intSpring = (int)Spring.April;
             Season SeasonNaber = Season.Winter | Season.Summer | Season.Autum | Season.Spring;
-            Console.WriteLine("Введите время года Spring, Summer, Autumn, Winter"); 
+            const Season constseaswinter = Season.Winter;
+            Console.WriteLine("Введите время года Spring, Summer, Autumn, Winter");
             string EntSeason = Console.ReadLine();
-            string trfx = "Spring";
+            string trfx = "Summer";
             string trfx2 = "Winter";
             bool seasSpring = (EntSeason == trfx);
             bool seasWinter = (EntSeason == trfx2);
-
-            switch (EntSeason) 
+            PrintMessage(Season.Summer);
+            switch (SeasonNaber) 
             {
-                case Winter:
-                    Console.WriteLine("Добрый день");
+                case Season.Winter:
+                    Console.WriteLine($"Декабрь Январь Февраль");
+                    break;
+                case Season.Summer:
+                    Console.WriteLine($"Июнь Июль Август");
+                    break;
 
             }
-
+            
             //string seas = AllSpringMonth;
             //Console.WriteLine($"Введите время года {SeasonSpring}");
-            if (seasSpring)
-            {
-              Console.WriteLine($"Месяцы {SeasonSpring}");
-            }
-            else if (seasWinter)
-            {
-                Console.WriteLine($"Месяцы {seasWinter}");
-            }
+            //  if (seasSpring)
+            //{
+            //  Console.WriteLine($"Месяцы {seasWinter}");
+            // }
+            // else if (seasWinter)
+            // {
+            //     Console.WriteLine($"Месяцы {seasWinter}");
+            // }
 
             Console.ReadLine();
         }
